@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ride Request App</title>
+</head>
+<body>
+    <h1>Ride Request App</h1>
+    <h2>Request a Driver Service</h2>
+    <form action="{{ url_for('request_driver') }}" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br>
+        <label for="pickup_location">Pickup Location:</label>
+        <input type="text" id="pickup_location" name="pickup_location" required><br>
+        <label for="destination">Destination:</label>
+        <input type="text" id="destination" name="destination" required><br>
+        <button type="submit">Request Driver</button>
+    </form>
+    
+    <h2>Request VIP Protection Service</h2>
+    <form action="{{ url_for('request_vip') }}" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br>
+        <label for="pickup_location">Pickup Location:</label>
+        <input type="text" id="pickup_location" name="pickup_location" required><br>
+        <label for="destination">Destination:</label>
+        <input type="text" id="destination" name="destination" required><br>
+        <button type="submit">Request VIP Protection</button>
+    </form>
+
+    <h2>View Requests</h2>
+    <ul>
+        <li><a href="{{ url_for('show_driver_requests') }}">Driver Requests</a></li>
+        <li><a href="{{ url_for('show_vip_requests') }}">VIP Requests</a></li>
+    </ul>
+</body>
+</html>

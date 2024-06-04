@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>VIP Requests</title>
+</head>
+<body>
+    <h1>VIP Requests</h1>
+    <ul>
+        {% for request in requests %}
+        <li>Name: {{ request.name }}, Pickup Location: {{ request.pickup_location }}, Destination: {{ request.destination }}</li>
+        {% endfor %}
+    </ul>
+    <a href="{{ url_for('index') }}">Back to Home</a>
+</body>
+</html>
